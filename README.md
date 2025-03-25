@@ -2,28 +2,28 @@
 
 ## :penguin: 1.0 Install Docker on Ubuntu
 
-### :arrow_right: 1.1 Update packages and install dependencies
+### 1.1 Update packages and install dependencies
 
 ```sh
 $ sudo apt update && sudo apt upgrade -y
 $ sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 ```
 
-### :arrow_right: 1.2 Add the official Docker repository
+### 1.2 Add the official Docker repository
 
 ```sh
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-### :arrow_right: 1.3 Install Docker
+### 1.3 Install Docker
 
 ```sh
 $ sudo apt update
 $ sudo apt install -y docker-ce docker-ce-cli containerd.io
 ```
 
-### :arrow_right: 1.4 Verify the installation / Enable Docker
+### 1.4 Verify the installation / Enable Docker
 
 ```sh
 $ sudo systemctl enable docker
@@ -31,7 +31,7 @@ $ sudo systemctl start docker
 $ sudo docker --version
 ```
 
-### :arrow_right: 1.5 Add user to the Docker group (Optional, avoids using sudo)
+### 1.5 Add user to the Docker group (Optional, avoids using sudo)
 
 ```sh
 $ sudo usermod -aG docker $USER
@@ -48,20 +48,20 @@ $ docker-compose --version
 
 ## :whale2: 3.0 Create the Docker environment with PHP 8 and MySQL
 
-### :arrow_right: 3.1 Create a directory for the project and navigate to it
+### 3.1 Create a directory for the project and navigate to it
 
 ```sh
 $ mkdir my-docker-project
 $ cd my-docker-project
 ```
 
-### :arrow_right: 3.2 Create a docker-compose.yml file
+### 3.2 Create a docker-compose.yml file
 
 ```sh
 $ nano docker-compose.yml
 ```
 
-### :arrow_right: 3.3 Add the following content
+### 3.3 Add the following content
 
 ```sh
 version: "3.8"
@@ -98,7 +98,7 @@ volumes:
 
 ## :card_file_box: 4.0 Create the project directory
 
-### :arrow_right: 4.1 Create a folder to store PHP files
+### 4.1 Create a folder to store PHP files
 
 ```sh
 $ mkdir www
@@ -107,25 +107,25 @@ $ echo "<?php phpinfo(); ?>" > www/index.php
 
 ## :whale2: 5.0 Run Docker
 
-### :arrow_right: 5.1 Start the containers
+### 5.1 Start the containers
 
 ```sh
 $ docker-compose up -d
 ```
 
-### :arrow_right: 5.2 Check the running containers
+### 5.2 Check the running containers
 
 ```sh
 $ docker ps
 ```
 
-### :arrow_right: 5.3 Access PHP in the browser
+### 5.3 Access PHP in the browser
 
 ```sh
 $ http://localhost:8080
 ```
 
-### :arrow_right: 5.4 Access PHP in the browser
+### 5.4 Access PHP in the browser
 
 ```sh
 $ docker exec -it mysql_container mysql -u user -p
@@ -133,13 +133,13 @@ $ docker exec -it mysql_container mysql -u user -p
 
 ## :x: 6.0 Stop and Remove Containers
 
-### :arrow_right: 6.1 To stop the containers
+### 6.1 To stop the containers
 
 ```sh
 $ docker-compose down
 ```
 
-### :arrow_right: 6.2 To remove everything (including volumes)
+### 6.2 To remove everything (including volumes)
 
 ```sh
 $ docker-compose down -v
