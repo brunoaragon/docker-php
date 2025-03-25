@@ -1,4 +1,4 @@
-# Docker / PHP 8 + MySql
+# Docker / PHP 8 + MySQL
 
 ## :penguin: 1.0 Install Docker on Ubuntu
 
