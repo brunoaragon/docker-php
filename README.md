@@ -51,8 +51,8 @@ $ docker-compose --version
 ### 3.1 Create a directory for the project and navigate to it
 
 ```sh
-$ mkdir my-docker-project
-$ cd my-docker-project
+$ mkdir docker-php
+$ cd docker-php
 ```
 
 ### 3.2 Create a docker-compose.yml file
@@ -125,7 +125,7 @@ $ docker ps
 $ http://localhost:8080
 ```
 
-### 5.4 Access PHP in the browser
+### 5.4 Connect to MySQL via terminal
 
 ```sh
 $ docker exec -it mysql_container mysql -u user -p
